@@ -1,0 +1,20 @@
+return Def.ActorFrame{
+	LoadActor("title")..{
+		OnCommand=cmd(x,SCREEN_CENTER_X;y,76);
+	};
+	LoadActor("subt")..{
+		OnCommand=cmd(x,SCREEN_CENTER_X;y,111);
+	};
+	LoadActor("../hand")..{
+		OnCommand=cmd(x,SCREEN_CENTER_X+260;y,SCREEN_TOP+105;zoom,.73;bounce);
+	};
+	LoadActor("../hand")..{
+		OnCommand=cmd(x,SCREEN_CENTER_X-260;y,SCREEN_TOP+105;zoom,.73;zoomx,-.73;bounce);
+	};
+	LoadActor("framebg")..{
+		OnCommand=cmd(x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y+146;diffusealpha,.5);
+	};
+	LoadActor("framefg")..{
+		OnCommand=cmd(x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y+146);
+	};
+};

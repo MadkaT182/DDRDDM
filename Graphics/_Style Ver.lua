@@ -1,0 +1,32 @@
+return Def.ActorFrame {
+	InitCommand=cmd(Center);
+	LoadActor("Style/item_sin")..{
+		OnCommand=cmd(x,-149;y,-98);
+		OffCommand=cmd(linear,.32;zoom,0);
+		GainFocusCommand=cmd(diffusealpha,1;diffuse,0.25,0.25,0.25,1);
+		LoseFocusCommand=cmd(diffusealpha,0);
+	};
+	LoadActor("Style/item_ver")..{
+		OnCommand=cmd(x,-149;y,-24);
+		OffCommand=cmd(linear,.32;zoom,0);
+		GainFocusCommand=cmd(bob;diffusealpha,1);
+		LoseFocusCommand=cmd(stopeffect;diffusealpha,0);
+	};
+	LoadActor("Style/item_dou")..{
+		OnCommand=cmd(x,-149;y,46);
+		OffCommand=cmd(linear,.32;zoom,0);
+		GainFocusCommand=cmd(diffusealpha,1;diffuse,0.25,0.25,0.25,1);
+		LoseFocusCommand=cmd(diffusealpha,0);
+	};
+	LoadActor("Style/icon_ver")..{
+		OnCommand=cmd(x,129;y,-25);
+		GainFocusCommand=cmd(diffusealpha,1);
+		LoseFocusCommand=cmd(diffusealpha,0);
+	};
+	LoadActor("Style/desc_ver")..{
+		OnCommand=cmd(y,146);
+		OffCommand=cmd(linear,.32;zoom,0);
+		GainFocusCommand=cmd(diffusealpha,1;zoomy,0;linear,.5;zoomy,1);
+		LoseFocusCommand=cmd(stoptweening;diffusealpha,0);
+	};
+};
